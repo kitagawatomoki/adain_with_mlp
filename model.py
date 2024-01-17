@@ -90,8 +90,8 @@ class AutoEncoder(nn.Module):
         return self.final_conv(x)
 
     def forward(self, x):
-        z = self.style_encoder(x)
-        x = self.style_decoder(z)
+        z = self.encoder(x)
+        x = self.decoder(z)
         return x
 
 ########################
